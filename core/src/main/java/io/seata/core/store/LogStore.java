@@ -22,7 +22,7 @@ import java.util.List;
  * the transaction log store
  *
  * @author zhangsen
- * @data 2019 /3/26
+ * @date 2019 /3/26
  */
 public interface LogStore {
 
@@ -106,5 +106,14 @@ public interface LogStore {
      * @return the boolean
      */
     boolean deleteBranchTransactionDO(BranchTransactionDO branchTransactionDO);
+
+    /**
+     * Gets current max session id.
+     *
+     * @param high the high
+     * @param low  the low
+     * @return the current max session id
+     */
+    long getCurrentMaxSessionId(long high, long low);
 
 }
